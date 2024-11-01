@@ -1,10 +1,6 @@
-<div class="container">
-    <div class="row">
-      <div class="col-6 col-md-4 col-lg-3 mb-4" *ngFor="let t of transactions"> 
-        <div class="card h-100"> 
-          <app-transazione-singola [transaction]="t"></app-transazione-singola>
-        </div>
-      </div>
-    </div>
-  </div>
-  
+<div class="d-flex flex-wrap gap-3">
+  <app-transazione-singola
+    *ngFor="let t of transactions"
+    [transaction]="t"
+  ></app-transazione-singola>
+</div>

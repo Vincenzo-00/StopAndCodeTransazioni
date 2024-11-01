@@ -1,9 +1,11 @@
-<div class="card-body">
-    <p class="card-title">{{ transaction?.name }}</p>
-    <p class="card-subtitle mb-2 text-muted">{{ transaction?.business }}</p>
-    <p>Amount: {{ transaction?.amount }}</p>
-    <p>Date: {{ transaction?.date  }}</p>
-    <p>Type: {{ transaction?.type }}</p>
-    <p>Account: {{ transaction?.account }}</p>
+<div class="card" style="width: 26rem;" *ngIf="transaction">
+  <div class="card-body">
+      <h5 class="card-title">{{ transaction.business | uppercase}}</h5>
+      <p class="card-text">{{ transaction.name }}</p>
+      <p>Account: {{ transaction.account }}</p>
+      <p>Date: {{ transaction.date *1000 | date | uppercase}}</p>
+      <p>Type: {{ transaction.type }}</p>
+      <p>Amount: {{ transaction.amount }}</p>
+
   </div>
-  
+  </div>
